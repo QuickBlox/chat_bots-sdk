@@ -1,21 +1,13 @@
 'use strict'
 
+var CONFIG = require('./config').CONFIG;
 var Client= require('node-xmpp-client');
 var QB = require('quickblox');
-
-// Get application credentioaln on https://admin.quickblox.com
-//
-var CONFIG = {"app_id": "13318",
-              "authKey": "WzrAY7vrGmbgFfP",
-              "authSecret": "xS2uerEveGHmEun",
-              "user_id": "2740296",
-              "user_password": "mehdoh00",
-              "chat_host": "chat.quickblox.com"}
 
 QB.init(CONFIG.appId, CONFIG.authKey, CONFIG.authSecret);
 
 var client = new Client({
-  jid: CONFIG.user_id + "-" + CONFIG.app_id + "@" + CONFIG.chat_host + "/" + generateUUID(),
+  jid: QB.chat.helpers.getUserJid(CONFIG.user_id, CONFIG.app_id ) + "/" + generateUUID(),
   password: CONFIG.user_password,
   reconnect: true
 });

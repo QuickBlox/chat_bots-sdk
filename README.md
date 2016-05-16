@@ -15,7 +15,7 @@ nohup node examples/echo_one_to_one_bot/echo_one_to_one_bot.js &
 ```
 
 Sometimes it's useful to automatically run a script on a Linux when it boots up.
-We prepared the **init.d** script which can be used to manage the Chat bot.
+We prepared the [**init.d**](https://github.com/QuickBlox/chat_bots-sdk/tree/master/init.d) script which can be used to manage the Chat bot.
 First of all copy it to **/etc/init.d/** directory on your Linux.
 
 Then make the script executable:

@@ -39,3 +39,6 @@ sudo update-rc.d qbchatbot defaults
 ```
 
 This creates a link to /etc/init.d/qbchatbot in directories from /etc/rc0.d through to /etc/rc6.d. When Linux boots up or shuts down, it looks in these folders to see if any scripts or programs need to be run. When You restart your server the chat bot starts automatically.
+
+# LICENSE
+BSD

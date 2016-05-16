@@ -6,7 +6,7 @@ Also can be used with Q-municate messenger https://qm.quickblox.com
 # How to run
 Use next command to run a bot:
 ```bash
-node node examples/echo_one_to_one_bot/echo_one_to_one_bot.js 
+node examples/echo_one_to_one_bot/echo_one_to_one_bot.js 
 ```
 
 Use next command to run a bot in background:

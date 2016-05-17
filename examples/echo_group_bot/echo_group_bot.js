@@ -21,7 +21,7 @@ client.on('online', function () {
 
   // join group chat dialog
   var joinPresence = new Client.Stanza('presence', {
-      to: QB.chat.helpers.getRoomJidFromDialogId(CONFIG.dialog_id) + "/" + CONFIG.user_id
+      to: QB.chat.helpers.getRoomJidFromDialogId(CONFIG.dialogId) + "/" + CONFIG.user_id
     })
   joinPresence.c('x', {xmlns: 'http://jabber.org/protocol/muc'}).c('history', {maxstanzas: 0})
   client.send(joinPresence)
@@ -30,28 +30,39 @@ client.on('online', function () {
 client.on('stanza', function (stanza) {
   if (stanza.is('message')){
     if (stanza.attrs.type == 'groupchat') {
-      var body = stanza.getChild('body')
+      var bodyChild = stanza.getChild('body')
+      var fromArray = stanza.attrs.from.split("/")
+      var fromResource = fromArray[1]
 
-      if(body){
+      // - skip own messages in the group chat, don't replay to them
+      // - reply only when someone mentions you. For example: "@YourBotBestFriend how are you?"
+      var mentionStartIndex = -1
+      var mentionPattern = "@" + CONFIG.userFullname
+      var mentionLength = mentionPattern.length
+      if(bodyChild){
+        mentionStartIndex = bodyChild.getText().indexOf(mentionPattern)
+      }
+      if(fromResource != CONFIG.user_id && mentionStartIndex > -1){
 
-        var fromArray = stanza.attrs.from.split("/")
-
-        // skip own messages in group chat, don't replay to them
-        var fromResource = fromArray[1]
-        if(fromResource == CONFIG.user_id){
-          return;
+        // build a reply
+        var realBody
+        if(mentionStartIndex == 0 && bodyChild.getText().substring(mentionLength, mentionLength+1) == " "){
+          realBody = bodyChild.getText().substring(mentionLength+1);
+        }else{
+          realBody = "What's up? I react only for commands like this: '@YourBotBestFriend <text>'"
         }
 
         // Swap addresses...
-        stanza.attrs.to = fromArray[0]; 
+        stanza.attrs.to = fromArray[0];
         delete stanza.attrs.from
-
-        var extraParams = stanza.getChild('extraParams')
-        var dateSent = extraParams.getChild('date_sent')
 
         stanza.attrs.id = QB.chat.helpers.getBsonObjectId();
 
-        dateSent.text = Math.floor(Date.now() / 1000)
+        bodyChild.children[0] = realBody
+
+        var extraParams = stanza.getChild('extraParams')
+        var dateSentChild = extraParams.getChild('date_sent')
+        dateSentChild.text = Math.floor(Date.now() / 1000)
 
         // and send back
         client.send(stanza)

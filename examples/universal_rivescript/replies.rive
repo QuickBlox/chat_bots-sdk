@@ -624,5 +624,5 @@
 // depth later in the tutorial.
 > object google javascript
 	var query = escape(args.join(" "));
-	return "<a href=\"http://www.google.com/search?q=" + query + "\">Click Here!</a>";
+	return "http://www.google.com/search?q=" + query;
 < object

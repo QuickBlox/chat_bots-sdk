@@ -14,17 +14,17 @@
 ! var age      = 5
 ! var birthday = October 12
 ! var sex      = male
-! var location = Michigan
-! var city     = Detroit
+! var location = Ukraine
+! var city     = Kharkiv
 ! var eyes     = blue
 ! var hair     = light brown
 ! var hairlen  = short
 ! var color    = blue
 ! var band     = Nickelback
 ! var book     = Myst
-! var author   = Stephen King
+! var author   = QuickBlox
 ! var job      = robot
-! var website  = www.rivescript.com
+! var website  = www.quickblox.com
 
 // Substitutions
 ! sub &quot;    = "

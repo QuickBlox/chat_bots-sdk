@@ -337,38 +337,38 @@
 - It did not bother me. Please continue.
 
 + i remember *
-- Do you often think of <star2>?
-- Does thinking of <star2> bring anything else to mind?
-- Why do you remember <star2> just now?
-- What in the present situation reminds you of <star2>?
-- What is the connection between me and <star2>?
-- What else does <star2> remind you of?
+- Do you often think of <star1>?
+- Does thinking of <star1> bring anything else to mind?
+- Why do you remember <star1> just now?
+- What in the present situation reminds you of <star1>?
+- What is the connection between me and <star1>?
+- What else does <star1> remind you of?
 
 + do you remember *
-- Did you think I would forget <star2>?
-- Why do you think I should recall <star2> now?
-- What about <star2>?
-- You mentioned <star2>?
+- Did you think I would forget <star1>?
+- Why do you think I should recall <star1> now?
+- What about <star1>?
+- You mentioned <star1>?
 
 + you remember *
-- How could I forget <star2>?
-- What about <star2> should I remember?
+- How could I forget <star1>?
+- What about <star1> should I remember?
 
 + i forget *
-- Can you think of why you might forget <star2>?
-- Why can't you remember <star2>?
-- How often do you think of <star2>?
+- Can you think of why you might forget <star1>?
+- Why can't you remember <star1>?
+- How often do you think of <star1>?
 - Does it bother you to forget that?
 - Could it be a mental block?
 - Are you generally forgetful?
-- Do you think you are suppressing <star2>?
+- Do you think you are suppressing <star1>?
 
 + did you forget *
 - Why do you ask?
 - Are you sure you told me?
-- Would it bother you if I forgot <star2>?
-- Why should I recall <star2> just now?
-- Tell me more about <star2>.
+- Would it bother you if I forgot <star1>?
+- Why should I recall <star1> just now?
+- Tell me more about <star1>.
 
 + [*] if *
 - Do you think it's likely that <star2>?
@@ -409,24 +409,24 @@
 - What do you think about machines?
 
 + am i *
-- Do you believe you are <star2>?
-- Would you want to be <star2>?
-- Do you wish I would tell you you are <star2>?
-- What would it mean if you were <star2>?
+- Do you believe you are <star1>?
+- Would you want to be <star1>?
+- Do you wish I would tell you you are <star1>?
+- What would it mean if you were <star1>?
 
 + are you *
-- Are you interested in whether I am <star2> or not?
-- Would you prefer if I weren't <star2>?
-- Perhaps I am <star2> in your fantasies.
-- Do you sometimes think I am <star2>?
+- Are you interested in whether I am <star1> or not?
+- Would you prefer if I weren't <star1>?
+- Perhaps I am <star1> in your fantasies.
+- Do you sometimes think I am <star1>?
 - Would it matter to you?
-- What if I were <star2>?
+- What if I were <star1>?
 
 + you are *
-- What makes you think I am <star2>?
-- Does it please you to believe I am <star2>?
-- Do you sometimes wish you were <star2>?
-- Perhaps you would like to be <star2>.
+- What makes you think I am <star1>?
+- Does it please you to believe I am <star1>?
+- Do you sometimes wish you were <star1>?
+- Perhaps you would like to be <star1>.
 
 + * are *
 - Did you think they might not be <star2>?
@@ -444,16 +444,16 @@
 - Do you want my <star2>?
 
 + was i *
-- What if you were <star2>?
-- Do you think you were <star2>?
-- Were you <star2>?
-- What would it mean if you were <star2>?
-- What does '<star2>' suggest to you?
+- What if you were <star1>?
+- Do you think you were <star1>?
+- Were you <star1>?
+- What would it mean if you were <star1>?
+- What does '<star1>' suggest to you?
 
 + i was *
 - Were you really?
-- Why do you tell me you were <star2> now?
-- Perhaps I already know you were <star2>.
+- Why do you tell me you were <star1> now?
+- Perhaps I already know you were <star1>.
 
 + [*] was you *
 - Would you like to believe I was <star2>?
@@ -463,70 +463,70 @@
 - What if I had been <star2>?
 
 + i (desire|want|need) *
-- What would it mean to you if you got <star3>?
-- Why do you want <star3>?
-- Suppose you got <star3> soon.
-- What if you never got <star3>?
-- What would getting <star3> mean to you?
-- What does wanting <star3> have to do with this discussion?
+- What would it mean to you if you got <star1>?
+- Why do you want <star1>?
+- Suppose you got <star1> soon.
+- What if you never got <star1>?
+- What would getting <star1> mean to you?
+- What does wanting <star1> have to do with this discussion?
 
 + i am (sad|unhappy|mad|angry|pissed|depressed) [*]
-- I am sorry to hear that you are <star2>.
-- Do you think coming here will help you not to be <star2>?
-- I'm sure it's not pleasant to be <star2>.
-- Can you explain what made you <star2>?
+- I am sorry to hear that you are <star1>.
+- Do you think coming here will help you not to be <star1>?
+- I'm sure it's not pleasant to be <star1>.
+- Can you explain what made you <star1>?
 
 + i am (happy|excited|glad) [*]
-- How have I helped you to be <star2>?
-- Has your treatment made you <star2>?
-- What makes you <star2> just now?
-- Can you explain why you are <star2>?
+- How have I helped you to be <star1>?
+- Has your treatment made you <star1>?
+- What makes you <star1> just now?
+- Can you explain why you are <star1>?
 
 + i (believe|think) *
 - Do you really think so?
-- But you are not sure you <star3>.
-- Do you really doubt you <star3>
+- But you are not sure you <star1>.
+- Do you really doubt you <star1>
 
 + i am *
-- Is it because you are <star2> that you came to me?
-- How long have you been <star2>?
-- Do you believe it is normal to be <star2>?
-- Do you enjoy being <star2>?
-- Do you know anyone else who is <star2>?
+- Is it because you are <star1> that you came to me?
+- How long have you been <star1>?
+- Do you believe it is normal to be <star1>?
+- Do you enjoy being <star1>?
+- Do you know anyone else who is <star1>?
 
 + i can not *
-- How do you know that you can't <star2>?
+- How do you know that you can't <star1>?
 - Have you tried?
-- Perhaps you could <star2> now.
-- Do you really want to be able to <star2>?
-- What if you could <star2>?
+- Perhaps you could <star1> now.
+- Do you really want to be able to <star1>?
+- What if you could <star1>?
 
 + i do not *
-- Don't you really <star2>?
-- Why don't you <star2>?
-- Do you wish to be able to <star2>?
+- Don't you really <star1>?
+- Why don't you <star1>?
+- Do you wish to be able to <star1>?
 - Does that trouble you?
 
 + i feel *
 - Tell me more about such feelings.
-- Do you often feel <star2>?
-- Do you enjoy feeling <star2>?
-- Of what does feeling <star2> remind you?
+- Do you often feel <star1>?
+- Do you enjoy feeling <star1>?
+- Of what does feeling <star1> remind you?
 
 + i * you
-- Perhaps in your fantasies we <star2> each other.
-- Do you wish to <star2> me?
-- You seem to need to <star2> me.
-- Do you <star2> anyone else?
+- Perhaps in your fantasies we <star1> each other.
+- Do you wish to <star1> me?
+- You seem to need to <star1> me.
+- Do you <star1> anyone else?
 
 + you * me
-- Why do you think I <star2> you?
-- You like to think I <star2> you -- don't you?
-- What makes you think I <star2> you?
-- Really, I <star2> you?
-- Do you wish to believe I <star2> you?
-- Suppose I did <star2> you -- what would that mean?
-- Does someone else believe I <star2> you?
+- Why do you think I <star1> you?
+- You like to think I <star1> you -- don't you?
+- What makes you think I <star1> you?
+- Really, I <star1> you?
+- Do you wish to believe I <star1> you?
+- Suppose I did <star1> you -- what would that mean?
+- Does someone else believe I <star1> you?
 
 + [*] you *
 - We were discussing you -- not me.
@@ -551,8 +551,8 @@
 @ nope
 
 + no one *
-- Are you sure, no one <star2>?
-- Surely someone <star2>.
+- Are you sure, no one <star1>?
+- Surely someone <star1>.
 - Can you think of anyone at all?
 - Are you thinking of a very special person?
 - Who, may I ask?
@@ -561,19 +561,19 @@
 
 + [*] my (mom|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
 - Tell me more about your family.
-- Who else in your family <star3>?
-- Your <star2>?
-- What else comes to mind when you think of your <star2>?
+- Who else in your family <star2>?
+- Your <star1>?
+- What else comes to mind when you think of your <star1>?
 
 + can you *
-- You believe I can <star2> don't you?
-- You want me to be able to <star2>.
-- Perhaps you would like to be able to <star2> yourself.
+- You believe I can <star1> don't you?
+- You want me to be able to <star1>.
+- Perhaps you would like to be able to <star1> yourself.
 
 + can i *
-- Whether or not you can <star2> depends on you more than on me.
-- Do you want to be able to <star2>?
-- Perhaps you don't want to <star2>.
+- Whether or not you can <star1> depends on you more than on me.
+- Do you want to be able to <star1>?
+- Perhaps you don't want to <star1>.
 
 + (what|who|when|where|how) [*]
 - Why do you ask?
@@ -593,16 +593,16 @@
 - What other reasons might there be?
 
 + why do not you *
-- Do you believe I don't <star2>?
-- Perhaps I will <star2> in good time.
-- Should you <star2> yourself?
-- You want me to <star2>?
+- Do you believe I don't <star1>?
+- Perhaps I will <star1> in good time.
+- Should you <star1> yourself?
+- You want me to <star1>?
 
 + why can not i *
-- Do you think you should be able to <star2>?
-- Do you want to be able to <star2>?
-- Do you believe this will help you to <star2>?
-- Have you any idea why you can't <star2>?
+- Do you think you should be able to <star1>?
+- Do you want to be able to <star1>?
+- Do you believe this will help you to <star1>?
+- Have you any idea why you can't <star1>?
 
 + everyone *
 - Really, everyone?
@@ -614,3 +614,15 @@
 - Someone special perhaps?
 - You have a particular reason in mind, don't you?
 - Who do you think you're talking about?
+
+// If the user begins a message with "google" it will create
+// a google search link.
++ google *
+- Google Search: <call>google <star></call>
+
+// Here is the Google search object. We'll cover objects in more
+// depth later in the tutorial.
+> object google javascript
+	var query = escape(args.join(" "));
+	return "<a href=\"http://www.google.com/search?q=" + query + "\">Click Here!</a>";
+< object

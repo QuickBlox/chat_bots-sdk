@@ -7,5 +7,5 @@ exports.CONFIG = { "appId": "13318",
               "authSecret": "xS2uerEveGHmEun",
                  "user_id": "2740296",
            "user_password": "mehdoh00",
-           "userFullname": "YourBotBestFriend",
+           "userFullname": "qbot",
                "dialogId": "573734d5a28f9a06a700008d"}

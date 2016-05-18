@@ -8,4 +8,4 @@ exports.CONFIG = { "appId": "13318",
                  "user_id": "2740296",
            "user_password": "mehdoh00",
            "userFullname": "qbot",
-               "dialogId": "573734d5a28f9a06a700008d"}
+               "dialogId": "56cd90f8a28f9a7e7d000113"} //

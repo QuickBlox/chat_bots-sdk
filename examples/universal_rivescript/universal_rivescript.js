@@ -56,13 +56,7 @@ client.on('stanza', function (stanza) {
 		}
 
   }else if (stanza.is('presence')){
-    var x = stanza.getChild('x');
-    if(x && x.attrs.xmlns == "http://jabber.org/protocol/muc#user"){
-      var status = x.getChild('status')
-			if(status && status.attrs.code == "110"){
-        console.log("group chat joined " + stanza.attrs.from);
-      }
-    }
+		presencePresence(stanza);
   }
 });
 
@@ -102,6 +96,24 @@ function joinGroupChats(dialogIds){
   	joinPresence.c('x', {xmlns: 'http://jabber.org/protocol/muc'}).c('history', {maxstanzas: 0});
   	client.send(joinPresence);
   });
+}
+
+function presencePresence(stanza){
+	var x = stanza.getChild('x');
+
+	// Group chat join response
+	if(x && x.attrs.xmlns == "http://jabber.org/protocol/muc#user"){
+		var status = x.getChild('status')
+		if(status && status.attrs.code == "110"){
+			console.log("group chat joined " + stanza.attrs.from);
+		}
+
+	// Subscription Request
+	}else if(stanza.attrs.type == "subscribe"){
+		var fromJid = stanza.attrs.from
+		client.send(generatePresenceSubscribed(fromJid))
+		client.send(generatePresenceSubscribe(fromJid))
+	}
 }
 
 function processMessage(stanza){
@@ -167,4 +179,14 @@ function generateReplyStanza(isGroup, toJid, bodyText, dialogId){
 function generateReplyText(inputText){
   var reply = riveScriptGenerator.reply("local-user", inputText);
   return reply
+}
+
+function generatePresenceSubscribed(toJid){
+	var stanza = new Client.Stanza('presence', {to: toJid, type: "subscribed"});
+	return stanza
+}
+
+function generatePresenceSubscribe(toJid){
+	var stanza = new Client.Stanza('presence', {to: toJid, type: "subscribe"});
+	return stanza
 }

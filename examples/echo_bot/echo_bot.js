@@ -3,31 +3,9 @@
 var CONFIG = require('./config').CONFIG;
 var Client= require('node-xmpp-client');
 var QB = require('quickblox');
-var RiveScript = require('rivescript');
 
-// Init QuickBlox
-//
 QB.init(CONFIG.appId, CONFIG.authKey, CONFIG.authSecret);
 
-// Init RiveScript
-//
-var riveScriptGenerator = new RiveScript();
-riveScriptGenerator.loadFile("replies.rive", loadingDone, loadingError);
-
-function loadingDone (batch_num) {
-	console.log("(RiveScript) Batch #" + batch_num + " has finished loading!");
-
-	// Now the replies must be sorted!
-	riveScriptGenerator.sortReplies();
-}
-
-function loadingError (batch_num, error) {
-	console.log("(RiveScript) Error when loading files: " + error);
-}
-
-
-// Init XMPP CLient
-//
 var client = new Client({
   jid: QB.chat.helpers.getUserJid(CONFIG.user.id) + "/" + "chatbot_" + Math.floor(Math.random() * 16777216).toString(16),
   password: CONFIG.user.password,
@@ -91,8 +69,7 @@ process.on('exit', function () {
   client.end()
 });
 
-
-////
+///
 
 function joinGroupChats(dialogIds){
   dialogIds.forEach(function(dialogId, index){
@@ -128,8 +105,8 @@ function processMessage(stanza){
 				realBody = "What's up? I react only for commands like this: '@YourBotBestFriend <text>'"
 			}
 
-			var extraParamsChild = stanza.getChild('extraParams');
-			var dialogId = extraParamsChild.getChild('dialog_id').getText();
+      var extraParamsChild = stanza.getChild('extraParams');
+      var dialogId = extraParamsChild.getChild('dialog_id').getText();
 
 			return generateReplyStanza(true, fromArray[0], generateReplyText(realBody), dialogId)
 		}
@@ -138,8 +115,8 @@ function processMessage(stanza){
 			if(bodyChild){
 	      var inputText = bodyChild.getText();
 
-				var extraParamsChild = stanza.getChild('extraParams');
-				var dialogId = extraParamsChild.getChild('dialog_id').getText();
+        var extraParamsChild = stanza.getChild('extraParams');
+        var dialogId = extraParamsChild.getChild('dialog_id').getText();
 
 				return generateReplyStanza(false, stanza.attrs.from, generateReplyText(inputText), dialogId)
 			}
@@ -165,6 +142,6 @@ function generateReplyStanza(isGroup, toJid, bodyText, dialogId){
 }
 
 function generateReplyText(inputText){
-  var reply = riveScriptGenerator.reply("local-user", inputText);
-  return reply
+  // echo text
+  return inputText
 }

@@ -1,8 +1,8 @@
 {
-  "name": "echo_group_bot",
+  "name": "echo_bot",
   "version": "0.0.1",
-  "description": "QuickBlox Group echo chat bot",
-  "main": "echo_group_bot.js",
+  "description": "QuickBlox echo chat bot",
+  "main": "echo_bot.js",
   "author": "QuickBlox team",
   "license": "BSD-2-Clause",
   "dependencies": {

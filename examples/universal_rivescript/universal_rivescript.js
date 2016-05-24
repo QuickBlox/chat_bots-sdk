@@ -5,6 +5,8 @@ var Client= require('node-xmpp-client');
 var QB = require('quickblox');
 var RiveScript = require('rivescript');
 
+var users = {}
+
 // Init QuickBlox
 //
 QB.init(CONFIG.appId, CONFIG.authKey, CONFIG.authSecret);
@@ -85,7 +87,6 @@ process.on('exit', function () {
   client.end()
 });
 
-
 ////
 
 function joinGroupChats(dialogIds){
@@ -143,7 +144,7 @@ function processMessage(stanza){
 			var extraParamsChild = stanza.getChild('extraParams');
 			var dialogId = extraParamsChild.getChild('dialog_id').getText();
 
-			return generateReplyStanza(true, fromArray[0], generateReplyText(realBody), dialogId)
+			return generateReplyStanza(true, fromArray[0], generateReplyText(realBody, fromArray[0]), dialogId)
 		}
 	} else if (stanza.attrs.type == 'chat') {
     	var bodyChild = stanza.getChild('body')
@@ -153,7 +154,7 @@ function processMessage(stanza){
 				var extraParamsChild = stanza.getChild('extraParams');
 				var dialogId = extraParamsChild.getChild('dialog_id').getText();
 
-				return generateReplyStanza(false, stanza.attrs.from, generateReplyText(inputText), dialogId)
+				return generateReplyStanza(false, stanza.attrs.from, generateReplyText(inputText, stanza.attrs.from), dialogId)
 			}
 	}
 }
@@ -176,8 +177,8 @@ function generateReplyStanza(isGroup, toJid, bodyText, dialogId){
 	return stanza
 }
 
-function generateReplyText(inputText){
-  var reply = riveScriptGenerator.reply("local-user", inputText);
+function generateReplyText(inputText, userId){
+  var reply = riveScriptGenerator.reply(userId, inputText);
   return reply
 }
 

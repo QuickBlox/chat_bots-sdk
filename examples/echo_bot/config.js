@@ -10,4 +10,4 @@ exports.CONFIG = { "appId": "13318",
                   "password": "mehdoh00",
                   "fullname": "qbot",
                      },
-               "dialogIds": ["573734d5a28f9a06a700008d" /*"56cd90f8a28f9a7e7d000113"*/]} //
+               "dialogIds": ["573734d5a28f9a06a700008d"]} //
